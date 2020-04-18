@@ -1,0 +1,169 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html, body {
+  height: 100vh;
+}
+
+body {
+  font-family: fantasy;
+  font-size: 14pt;
+  background: lightskyblue;
+}
+
+.pusheen {
+  background: lavender;
+}
+
+.wallpaper {
+  padding: 5px;
+  font-family: fantasy;
+  font-size: 14pt;
+}
+
+.pusheen:after {
+  content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.15;
+    background-image: url('pusheen.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.zelda {
+  background: lightskyblue;
+}
+
+.zelda:after {
+  content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.18;
+    background-image: url('zelda.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.red-panda {
+  background: lightsalmon;
+}
+
+.red-panda:after {
+  content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.24;
+    background-image: url('red panda.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.ganondorf {
+  background: lightgreen;
+}
+
+.ganondorf:after {
+  content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.24;
+    background-image: url('ganondorf.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 130px 100px auto 100px;
+}
+
+header {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 200px auto;
+}
+
+.level {
+  padding: 10px;
+}
+
+.stats {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 120px auto;
+}
+
+.words {
+  padding: 10px;;
+  background: white;
+  display: grid;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 150%;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+}
+
+.letter {
+  text-align: center;
+}
+
+.incorrect {
+  background: rgb(255, 124, 124);
+}
+
+.correct {
+  background: lightgreen;
+}
+
+.outlined {
+  border: solid 2px rgb(224, 123, 224);
+}
+
+
+.rank {
+  padding: 10px;
+}
+
+footer {
+  padding: 10px;
+}
