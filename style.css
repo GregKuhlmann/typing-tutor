@@ -10,7 +10,21 @@ html, body {
 body {
   font-family: fantasy;
   font-size: 14pt;
-  background: lightskyblue;
+  background: white;
+}
+
+#nextlevel {
+  font-family: fantasy;
+  font-size: 14pt;
+  line-height: 1.8em;
+  padding-top: 0.2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: 1em;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .wallpaper {
@@ -54,7 +68,6 @@ body {
   width: 100vw;
   height: 100vh;
   opacity: 0.76;
-  background: rgb(89, 163, 89);
 }
 
 header {
@@ -76,7 +89,7 @@ header {
 }
 
 .words {
-  padding: 10px;;
+  padding: 10px;
   background: white;
   display: grid;
   font-family: 'Courier New', Courier, monospace;

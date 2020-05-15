@@ -9,7 +9,7 @@
   <body id="bdy">
     <div class="container">
       <header>
-        <div class="level">Level 1</div>
+        <div class="level">Level <span id="level"></span></div>
         <div class="stats">
           <div class="stats-label">Total Time:</div>
           <div class="stats-item" id="totalTime">15m 0s</div>
@@ -128,6 +128,7 @@
       </section>
       <section class="rank">
         Rank: <span id="rank"></span>
+        <button id="nextlevel" class="hidden" onClick="setLevel()"></button>
       </section>
       <footer>
         <button class="wallpaper" onClick="setBackground('pusheen')">Pusheen</button>
@@ -136,7 +137,7 @@
         <button class="wallpaper" onClick="setBackground('red-panda')">Red Panda</button>
       </footer>
     </div>
-    <div class="backdrop"></div>
+    <div id="backdrop" class="backdrop"></div>
     <script src="script.js"></script>
   </body>
 </html>
