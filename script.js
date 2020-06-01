@@ -16,7 +16,7 @@ var texts = [
   "The snow blows white on the mount tonight, not a footprint to be seen.",
   "abcdefghijklmnopqrstuvwxyz now I know my ABCs. Next time sing with me.",
   "Cyrus Kuhlmann is my name. That name again is Cyrus Kuhlmann. See roos",
-  "Which one is better? Slime or putty? Shirin can't decide between the 2",
+  "Which one is better? Slime or putty? Shirin cannot pick between the 2.",
   "I like short sleeve shirts, alpacas, Breath of the Wild, and pizza pie",
   "They do lay eggs, Peregrin Falcons. Their wings are made of hand bones",
   "A tornado is epic, but not as epic as Ninjago. I must watch every one.",
@@ -25,6 +25,13 @@ var texts = [
   "The best way to spend my give money is to buy Switch Online for Varun.",
   "This year I want to do a science project. Not to turn in. Just for fun",
   "Link is a very fast character and when he jumps he shows the triforce.",
+  "Percy Jackson and the Olympians fight against Cronos and his evildoers",
+  "The ultimate design for a pinewood derby car is to put the weight back",
+  "Bubble gum tastes better when it comes in long ropes from a dispenser.",
+  "1 times 2 is 2. 2 times 2 is 4. 4 times 4 is 16. 16 * 16 is 256. Wow!!",
+  "Extraordinary circumstances call for extraordinary measures. Very true",
+  "Donald Trump has a lot of money. He only uses it for himself. Selfish!",
+  "on my bike ride I fell off my bike and hurt my tush. then my tush hurt",
 ]
 
 function shuffle(array) {
@@ -117,8 +124,11 @@ function onKey(e) {
   }
   place=place+1
   if (place == text.length) {
-    var ranks = ["C", "B", "A", "⭐️", "️️️⭐️⭐️"]
-    var rank = 4
+    var ranks = ["C", "B", "A", "⭐️", "️️️⭐️⭐️","⭐️⭐️⭐️"]
+    var rank = 5
+    if (accuracy < 90) {
+      rank = rank - 1
+    }
     if (accuracy < 80) {
       rank = rank - 1
     }
