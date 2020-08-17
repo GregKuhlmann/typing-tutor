@@ -126,6 +126,10 @@ function onKey(e) {
     document.getElementById(`letter${row}_${col}`).className = "letter correct"
   } else {
     document.getElementById(`letter${row}_${col}`).className = "letter incorrect"
+    // To help Cyrus learn uppercase, pause and make him get it right
+    if (expected!=expected.toLowerCase()) {
+      return
+    }
   }
   place=place+1
   if (place == text.length) {
