@@ -11,7 +11,7 @@ var text;
 var stars = 0;
 var wpms = 0;
 var accuracies = 0;
-var maxLevel = 2;
+var maxLevel = 15;
 
 var texts = [
   "My daddy is better than the father in Danny The Champion of the World.",
