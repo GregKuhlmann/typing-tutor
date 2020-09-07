@@ -58,7 +58,7 @@ body {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: 130px 100px auto 100px;
+  grid-template-rows: 130px 100px auto 260px 100px;
 }
 
 .backdrop {
@@ -113,6 +113,24 @@ header {
   outline: solid 2px rgb(224, 123, 224);
 }
 
+.summary {
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summary h1 {
+  font-size: 32pt;
+}
+
+.summary-body {
+  padding: 10px;
+  font-size: 20pt;
+  display: grid;
+  grid-template-columns: 300px auto;
+}
 
 .rank {
   padding: 20px;

@@ -6,9 +6,9 @@
     <title>Typing Tutor</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-  <body id="bdy">
+  <body id="bdy" class="zelda">
     <div class="container">
-      <header>
+      <header id="header-section">
         <div class="level">Level <span id="level"></span></div>
         <div class="stats">
           <div class="stats-label">Total Time:</div>
@@ -19,7 +19,7 @@
           <div class="stats-item" id="accuracy"></div>
         </div>
       </header>
-      <section class="words">
+      <section class="words" id="words-section">
         <div class="letter outlined" id="letter0_0">&nbsp;</div>
         <div class="letter" id="letter0_1">&nbsp;</div>
         <div class="letter" id="letter0_2">&nbsp;</div>
@@ -126,9 +126,20 @@
         <div class="letter" id="letter2_33">&nbsp;</div>
         <div class="letter" id="letter2_34">&nbsp;</div>
       </section>
-      <section class="rank">
+      <section class="rank" id="rank-section">
         Rank: <span id="rank"></span>
         <button id="nextlevel" class="hidden" onClick="setLevel()"></button>
+      </section>
+      <section class="summary hidden" id="summary-section">
+        <h1>Congratulations! You Finished!</h1>
+        <div class="summary-body">
+          <div class="summary-label">Stars Earned:</div>
+          <div class="summary-item" id="totalStars">17</div>
+          <div class="summary-label">Average Speed:</div>
+          <div class="summary-item" id="avgSpeed">22.7 wpm</div>
+          <div class="summary-label">Average Accuracy:</div>
+          <div class="summary-item" id="avgAccuracy">86.73%</div>
+        </div>
       </section>
       <footer>
         <button class="wallpaper" onClick="setBackground('pusheen')">Pusheen</button>

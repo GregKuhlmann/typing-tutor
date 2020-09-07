@@ -8,8 +8,13 @@ var place;
 var correct;
 var incorrect;
 var text;
+var stars = 0;
+var wpms = 0;
+var accuracies = 0;
+var maxLevel = 2;
 
 var texts = [
+  "My daddy is better than the father in Danny The Champion of the World.",
   "If I do not get out of bed on time, Uncle Jake will scream until I do.",
   "I miss training jiu jitsu with Andrew and Cody. Bear crawls are so fun",
   "Netflix has some good shows that I wish I could watch but that is okay",
@@ -61,6 +66,20 @@ function shuffle(array) {
 shuffle(texts);
 
 function setLevel() {
+  if ( level == maxLevel ) {
+    var wpm = (wpms / maxLevel).toFixed(2);
+    var accuracy = (accuracies / maxLevel).toFixed(2);
+
+    document.getElementById("nextlevel").className = "hidden";
+
+    document.getElementById("totalStars").innerText = `${stars} ⭐️`;
+    document.getElementById("avgSpeed").innerText = `${wpm} wpm`;
+    document.getElementById("avgAccuracy").innerText = `${accuracy}%`;
+    document.getElementById("summary-section").className = "summary";
+
+    return
+  }
+
   var h = Math.floor(Math.random() * 360);
   var bgColor = "hsl(" + h + ", 60%, 40%)";
   document.getElementById("backdrop").style.background = bgColor;
@@ -115,11 +134,11 @@ function onKey(e) {
 
   var minutes = (totalTime - remaining)/60;
   if (minutes > 0 ) {
-    var wpm =(correct/5/minutes).toFixed(2)
-    document.getElementById("speed").innerText=`${wpm} wpm`
+    var wpm =(correct/5/minutes)
+    document.getElementById("speed").innerText=`${wpm.toFixed(2)} wpm`
   }
-  var accuracy = (correct / (correct + incorrect) * 100).toFixed(2)
-  document.getElementById("accuracy").innerText = `${accuracy}%`
+  var accuracy = (correct / (correct + incorrect) * 100)
+  document.getElementById("accuracy").innerText = `${accuracy.toFixed(2)}%`
   var row = Math.floor(place / 35)
   var col = place % 35
   if (typed==expected) {
@@ -166,11 +185,17 @@ function onKey(e) {
     if (rank < 2) {
       document.getElementById("nextlevel").innerText="Try Again"
       document.getElementById("nextlevel").className=""
-    } else {
-      level += 1
-      if (level == texts.length) {
+    } else { /* rank >= 2 */
+      level += 1;
+      stars += rank-2;
+      accuracies += accuracy;
+      wpms += wpm;
+
+      if (level == maxLevel) {
         document.getElementById("totalTime").innerHTML = "You Finished!";
         clearInterval(tick);
+        document.getElementById("nextlevel").innerText="View Scoreboard";
+        document.getElementById("nextlevel").className=""
       } else {
         document.getElementById("nextlevel").innerText="Next Level"
         document.getElementById("nextlevel").className=""
