@@ -152,8 +152,8 @@ function onKey(e) {
   }
   place=place+1
   if (place == text.length) {
-    var ranks = ["C", "B", "A", "⭐️", "️️️⭐️⭐️","⭐️⭐️⭐️"]
-    var rank = 5
+    var ranks = ["C", "B", "A", "⭐️", "️️️⭐️⭐️","⭐️⭐️⭐️","⭐️⭐️⭐️⭐️","⭐️⭐️⭐️⭐️⭐️"]
+    var rank = 7
     if (accuracy < 90) {
       rank = rank - 1
     }
@@ -167,6 +167,12 @@ function onKey(e) {
       rank = rank - 1
     }
     if (accuracy < 20) {
+      rank = rank - 1
+    }
+    if (wpm < 25) {
+      rank = rank - 1
+    }
+    if (wpm < 20) {
       rank = rank - 1
     }
     if (wpm < 15) {
